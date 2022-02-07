@@ -2,6 +2,7 @@ import "dart:convert";
 
 import "package:http/http.dart" as http;
 import 'package:instagram_media/core/utils/constants.dart';
+import 'package:instagram_media/core/utils/session_manager.dart';
 import 'package:instagram_media/features/instagram_view/data/model/media_model.dart';
 import 'package:logger/logger.dart';
 
@@ -11,6 +12,7 @@ class InstagramService {
   late String? accessToken;
   late String? username;
 
+  /// to print logs
   var logger = Logger();
 
   // Gets the authorization code from the redirect url.
@@ -36,6 +38,7 @@ class InstagramService {
 
     accessToken = json.decode(response.body)["access_token"];
     userID = json.decode(response.body)["user_id"].toString();
+    SessionManager.instance.authToken = accessToken;
     return (accessToken != null && userID != null) ? true : false;
   }
 

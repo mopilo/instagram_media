@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 
+import 'core/utils/session_manager.dart';
 import 'features/instagram_view/presentation/pages/instagram_view.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  final sessionManager = SessionManager();
+  await sessionManager.initializeSession();
   runApp(const MyApp());
 }
 
