@@ -13,5 +13,5 @@ Run-Project:
 
 
 Quick-start:
-Setup an Instagram App in Facebook for Developers and copy your app secret and other details into `lib/core/utils/constants.dart`. 
+- Setup an Instagram App in Facebook for Developers and copy your app secret and other details into `lib/core/utils/constants.dart`. 
 
