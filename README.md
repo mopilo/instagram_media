@@ -5,7 +5,7 @@ A new Flutter project.
 ## Getting Started
 
 CLone-Project: 
-- git clone [instagram_media](https://github.com/mopilo/instagram_media.git)
+- git clone https://github.com/mopilo/instagram_media.git [instagram_media](https://github.com/mopilo/instagram_media.git)
 
 Run-Project:
 - flutter pub get
